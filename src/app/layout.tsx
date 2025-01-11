@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import clsx from "clsx";
-import {twMerge} from "tailwind-merge";
+import favicon from "@/assets/favicon.jpg";
 
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Light Saas Landing Page",
-  description: "Template created by Frontend Tribe",
+  title: "Scale Pro Solutions | Marketing Agency",
+  description:
+    "Let Us Handle Your Marketing While You Focus on Running Your Business.",
 };
 
 export default function RootLayout({
