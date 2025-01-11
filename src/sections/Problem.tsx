@@ -58,8 +58,8 @@ export const WhyBusinessesStruggle = () => {
             </ul>
             <p className="mt-5 text-md text-[#010d3e]">
               If you&apos;re spending money on ads and campaigns that don&apos;t
-              work, while your competitors dominate the market, you're not alone
-              - but you can&apos;t afford to ignore this any longer.
+              work, while your competitors dominate the market, you are not
+              alone - but you can&apos;t afford to ignore this any longer.
             </p>
           </div>
           <div className="image-content md:w-1/2 flex justify-center relative">
