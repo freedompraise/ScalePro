@@ -1,13 +1,13 @@
 "use client";
 
 import struggleStatsImage from "@/assets/struggle-stats.png";
-import { useScroll, useTransform } from "framer-motion";
+import { useScroll } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 
 export const WhyBusinessesStruggle = () => {
   const sectionRef = useRef(null);
-  const { scrollYProgress } = useScroll({
+  useScroll({
     target: sectionRef,
     offset: ["start end", "end start"],
   });
@@ -26,7 +26,7 @@ export const WhyBusinessesStruggle = () => {
             </div>
           </div>
           <h2 className="section-title mt-5">
-            Most Businesses Are Failing – Don&apos;t Be One of Them
+            Most Businesses Are Failing - Don&apos;t Be One of Them
           </h2>
           <p className="section-description mt-5">
             The numbers don&apos;t lie. Businesses are losing out daily, and
@@ -59,7 +59,7 @@ export const WhyBusinessesStruggle = () => {
             <p className="mt-5 text-md text-[#010d3e]">
               If you&apos;re spending money on ads and campaigns that don&apos;t
               work, while your competitors dominate the market, you're not alone
-              – but you can&apos;t afford to ignore this any longer.
+              - but you can&apos;t afford to ignore this any longer.
             </p>
           </div>
           <div className="image-content md:w-1/2 flex justify-center relative">
