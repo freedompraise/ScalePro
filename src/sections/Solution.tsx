@@ -24,6 +24,7 @@ export const ScaleProSolution = () => {
     <section
       ref={sectionRef}
       className="bg-gradient-to-b from-[#E8F1FF] to-[#D9E7FF] py-24 overflow-x-clip"
+      id="thesolution"
     >
       <div className="container">
         <div className="section-heading">

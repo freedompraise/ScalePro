@@ -1,8 +1,7 @@
 "use client";
 
-import struggleStatsImage from "@/assets/struggle-stats.png"; // Placeholder for a dramatic infographic
-import warningIcon from "@/assets/warning-icon.png"; // Placeholder for a floating warning or alert icon
-import { motion, useScroll, useTransform } from "framer-motion";
+import struggleStatsImage from "@/assets/struggle-stats.png";
+import { useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 
@@ -13,12 +12,11 @@ export const WhyBusinessesStruggle = () => {
     offset: ["start end", "end start"],
   });
 
-  const translateY = useTransform(scrollYProgress, [0, 1], [50, -50]);
-
   return (
     <section
       ref={sectionRef}
       className="bg-gradient-to-b from-[#F9FAFB] to-[#E3E8F1] py-24 overflow-x-clip"
+      id="theproblem"
     >
       <div className="container">
         <div className="section-heading">
@@ -68,18 +66,8 @@ export const WhyBusinessesStruggle = () => {
             <Image
               src={struggleStatsImage}
               alt="Statistics showing business struggles"
-              className="rounded-xl shadow-lg w-6/12"
+              className="rounded-xl shadow-lg w-8/12"
             />
-            {/* <motion.img
-              src={warningIcon.src}
-              alt="Warning Icon"
-              width={50}
-              height={50}
-              className="absolute top-0 right-0"
-              style={{
-                translateY,
-              }}
-            /> */}
           </div>
         </div>
       </div>

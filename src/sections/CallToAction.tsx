@@ -10,6 +10,7 @@ export const ReadyToScaleCTA = () => {
       style={{
         backgroundImage: `url(${backgroundImage.src})`,
       }}
+      id="cta"
     >
       <div className="absolute inset-0 bg-black/60"></div> {/* Overlay */}
       <div className="container relative z-10 text-center">

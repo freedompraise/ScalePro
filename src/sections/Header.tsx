@@ -4,6 +4,13 @@ import MenuIcon from "@/assets/menu.svg";
 import Image from "next/image";
 
 export const Header = () => {
+  // const bookACall = () => {
+  //   // Your code here
+
+  //   // Example: Redirect to Calendly
+  //   window.open("https://calendly.com/", "_blank");
+  // };
+
   return (
     <header className="sticky top-0 bg-white z-20">
       {/* <div className="flex justify-center items-center py-3 bg-black text-white text-sm gap-3">
@@ -23,11 +30,11 @@ export const Header = () => {
             <MenuIcon className="h-5 w-5 md:hidden" />
 
             <nav className="hidden md:flex gap-6 text-black/60 items-center">
-              <a href="#">Welcome</a>
-              <a href="#">The Problem</a>
-              <a href="#">ScalePro's Solution</a>
+              <a href="#welcome">Welcome</a>
+              <a href="#theproblem">The Problem</a>
+              <a href="#thesolution">ScalePro's Solution</a>
 
-              <a href="#">Our Socials</a>
+              <a href="#socials">Our Socials</a>
               <button className="bg-black text-white px-4 py-2 rounded-lg font-medium inline-flex align-items justify-center tracking-tight">
                 Book a free call
               </button>

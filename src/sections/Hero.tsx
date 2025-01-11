@@ -2,9 +2,7 @@
 
 import ArrowIcon from "@/assets/arrow-right.svg";
 import cogImage from "@/assets/cog.png";
-import cylinderImage from "@/assets/cylinder.png";
-import noodleImage from "@/assets/noodle.png";
-import Image from "next/image";
+
 import {
   motion,
   useScroll,
@@ -30,6 +28,7 @@ export const Hero = () => {
     <section
       ref={heroRef}
       className="pt-8 pb-20 md:pt-5 md:pb-10 bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183ec2,#eaeefe_100%)] overflow-x-clip"
+      id="welcome"
     >
       <div className="container">
         <div className="md:flex items-center">
