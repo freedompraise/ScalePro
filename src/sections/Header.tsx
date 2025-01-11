@@ -32,7 +32,7 @@ export const Header = () => {
             <nav className="hidden md:flex gap-6 text-black/60 items-center">
               <a href="#welcome">Welcome</a>
               <a href="#theproblem">The Problem</a>
-              <a href="#thesolution">ScalePro's Solution</a>
+              <a href="#thesolution">ScalePro&apos;s Solution</a>
 
               <a href="#socials">Our Socials</a>
               <button className="bg-black text-white px-4 py-2 rounded-lg font-medium inline-flex align-items justify-center tracking-tight">

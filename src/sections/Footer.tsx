@@ -23,7 +23,7 @@ export const Footer = () => {
         <nav className="flex flex-col md:flex-row md:justify-center gap-6 mt-6">
           <Link href="">Welcome</Link>
           <Link href="">The Problem</Link>
-          <Link href="">ScalePro's Solution</Link>
+          <Link href="">ScalePro&apos;s Solution</Link>
           <Link href="">Book a Free call</Link>
         </nav>
         <div className="flex justify-center gap-6 mt-6">
