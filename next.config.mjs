@@ -19,6 +19,14 @@ const nextConfig = {
         issuer: fileLoaderRule.issuer,
         resourceQuery: { not: [...fileLoaderRule.resourceQuery.not, /url/] }, // exclude if *.svg?url
         use: ["@svgr/webpack"],
+      },
+      // Add support for video files (e.g., .mp4)
+      {
+        test: /\.(mp4|webm|ogg)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "static/media/[hash][ext]", // Custom output directory for videos
+        },
       }
     );
 
@@ -28,7 +36,7 @@ const nextConfig = {
     return config;
   },
 
-  // ...other config
+  // Other configurations (if any)...
 };
 
 export default nextConfig;
