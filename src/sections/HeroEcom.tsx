@@ -1,3 +1,5 @@
+"use client";
+
 import { ArrowDownTrayIcon } from "@heroicons/react/16/solid";
 import ecomVideo from "@/assets/ecom-video.mp4";
 import { useScroll, useTransform, useMotionValueEvent } from "framer-motion";
