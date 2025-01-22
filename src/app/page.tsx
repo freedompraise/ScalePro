@@ -1,20 +1,45 @@
-import { ReadyToScaleCTA } from "@/sections/CallToAction";
+"use client";
+
+import { useSearchParams } from "next/navigation";
 import { Footer } from "@/sections/Footer";
 import { Header } from "@/sections/Header";
-import { Hero } from "@/sections/Hero";
-import { LogoTicker } from "@/sections/LogoTicker";
-import { ScaleProSolution } from "@/sections/Solution";
-import { WhyBusinessesStruggle } from "@/sections/Problem";
+
+// marketing
+import { ReadyToScaleCTA } from "@/sections/CTAMark";
+import { HeroMark } from "@/sections/HeroMark";
+import { ScaleProSolutionMark } from "@/sections/SolutionMark";
+import { WhyBusinessesStruggle } from "@/sections/ProblemMark";
+
+// ecommerce
+import { ScaleProCTA } from "@/sections/CTAEcom";
+import { HeroEcommerce } from "@/sections/HeroEcom";
+import { EcommerceSolutions } from "@/sections/SolutionEcom";
+import { WhyEcommerceFails } from "@/sections/ProblemEcom";
 
 export default function Home() {
+  const searchParams = useSearchParams();
+  const variant = searchParams.get("variant") || "marketing"; // Default to "marketing"
+
   return (
     <>
       <Header />
-      <Hero />
-      {/* <LogoTicker /> */}
-      <WhyBusinessesStruggle />
-      <ScaleProSolution />
-      <ReadyToScaleCTA />
+      {variant === "marketing" ? (
+        <>
+          <HeroMark />
+          <WhyBusinessesStruggle />
+          <ScaleProSolutionMark />
+          <ReadyToScaleCTA />
+        </>
+      ) : variant === "ecommerce" ? (
+        <>
+          <HeroEcommerce />
+          <WhyEcommerceFails />
+          <EcommerceSolutions />
+          <ScaleProCTA />
+        </>
+      ) : (
+        <p className="text-center py-24">Invalid variant specified.</p>
+      )}
       <Footer />
     </>
   );

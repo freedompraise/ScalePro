@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import clsx from "clsx";
-import favicon from "@/assets/favicon.jpg";
 
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
