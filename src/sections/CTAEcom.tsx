@@ -4,6 +4,10 @@ import ecommerceCTAImage from "@/assets/cta-background.jpg";
 import { motion } from "framer-motion";
 
 export const ScaleProCTA = () => {
+  const bookACall = () => {
+    window.open("https://calendly.com/adsgod/scalepro-audit-call", "_blank");
+  };
+
   return (
     <section
       className="relative bg-cover bg-center text-white py-24"
@@ -46,7 +50,7 @@ export const ScaleProCTA = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <button className="btn-primary text-lg px-6 py-3">
+          <button className="btn-primary text-lg px-6 py-3" onClick={bookACall}>
             Book Your Free Audit Call Now
           </button>
         </motion.div>

@@ -4,12 +4,9 @@ import MenuIcon from "@/assets/menu.svg";
 import Image from "next/image";
 
 export const Header = () => {
-  // const bookACall = () => {
-  //   // Your code here
-
-  //   // Example: Redirect to Calendly
-  //   window.open("https://calendly.com/", "_blank");
-  // };
+  const bookACall = () => {
+    window.open("https://calendly.com/adsgod/scalepro-audit-call", "_blank");
+  };
 
   return (
     <header className="sticky top-0 bg-white z-20">
@@ -35,7 +32,10 @@ export const Header = () => {
               <a href="#thesolution">ScalePro&apos;s Solution</a>
 
               <a href="#socials">Our Socials</a>
-              <button className="bg-black text-white px-4 py-2 rounded-lg font-medium inline-flex align-items justify-center tracking-tight">
+              <button
+                className="bg-black text-white px-4 py-2 rounded-lg font-medium inline-flex align-items justify-center tracking-tight hover:bg-opacity-50 hover:shadow-lg"
+                onClick={bookACall}
+              >
                 Book a free call
               </button>
             </nav>
