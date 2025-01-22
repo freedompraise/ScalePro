@@ -15,31 +15,44 @@ import { ScaleProCTA } from "@/sections/CTAEcom";
 import { HeroEcommerce } from "@/sections/HeroEcom";
 import { EcommerceSolutions } from "@/sections/SolutionEcom";
 import { WhyEcommerceFails } from "@/sections/ProblemEcom";
+import { Suspense } from "react";
 
-export default function Home() {
+function VariantRenderer() {
   const searchParams = useSearchParams();
   const variant = searchParams.get("mode") || "promotion"; // Default to "marketing"
 
+  if (variant === "promotion") {
+    return (
+      <>
+        <HeroMark />
+        <WhyBusinessesStruggle />
+        <ScaleProSolutionMark />
+        <ReadyToScaleCTA />
+      </>
+    );
+  }
+
+  if (variant === "retail") {
+    return (
+      <>
+        <HeroEcommerce />
+        <WhyEcommerceFails />
+        <EcommerceSolutions />
+        <ScaleProCTA />
+      </>
+    );
+  }
+
+  return <p className="text-center py-24">Invalid variant specified.</p>;
+}
+
+export default function Home() {
   return (
     <>
       <Header />
-      {variant === "promotion" ? (
-        <>
-          <HeroMark />
-          <WhyBusinessesStruggle />
-          <ScaleProSolutionMark />
-          <ReadyToScaleCTA />
-        </>
-      ) : variant === "retail" ? (
-        <>
-          <HeroEcommerce />
-          <WhyEcommerceFails />
-          <EcommerceSolutions />
-          <ScaleProCTA />
-        </>
-      ) : (
-        <p className="text-center py-24">Invalid variant specified.</p>
-      )}
+      <Suspense fallback={<p className="text-center py-24">Loading...</p>}>
+        <VariantRenderer />
+      </Suspense>
       <Footer />
     </>
   );
