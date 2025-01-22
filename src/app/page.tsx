@@ -1,25 +1,43 @@
-"use client";
-
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { Footer } from "@/sections/Footer";
 import { Header } from "@/sections/Header";
 
-// marketing
+// Marketing components
 import { ReadyToScaleCTA } from "@/sections/CTAMark";
 import { HeroMark } from "@/sections/HeroMark";
 import { ScaleProSolutionMark } from "@/sections/SolutionMark";
 import { WhyBusinessesStruggle } from "@/sections/ProblemMark";
 
-// ecommerce
+// E-commerce components
 import { ScaleProCTA } from "@/sections/CTAEcom";
 import { HeroEcommerce } from "@/sections/HeroEcom";
 import { EcommerceSolutions } from "@/sections/SolutionEcom";
 import { WhyEcommerceFails } from "@/sections/ProblemEcom";
-import { Suspense } from "react";
+
+// Dynamic metadata function
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: { mode?: string };
+}) {
+  const variant = searchParams.mode || "promotion";
+
+  return {
+    title:
+      variant === "promotion"
+        ? "Scale Pro Solutions | Marketing Agency"
+        : "Scale Pro Solutions | E-Commerce Services",
+    description:
+      variant === "promotion"
+        ? "Let Us Handle Your Marketing While You Focus on Running Your Business."
+        : "Empowering E-Commerce Businesses with Comprehensive Solutions for Success.",
+  };
+}
 
 function VariantRenderer() {
   const searchParams = useSearchParams();
-  const variant = searchParams.get("mode") || "promotion"; // Default to "marketing"
+  const variant = searchParams.get("mode") || "promotion"; // Default to "promotion"
 
   if (variant === "promotion") {
     return (
