@@ -18,19 +18,19 @@ import { WhyEcommerceFails } from "@/sections/ProblemEcom";
 
 export default function Home() {
   const searchParams = useSearchParams();
-  const variant = searchParams.get("variant") || "marketing"; // Default to "marketing"
+  const variant = searchParams.get("mode") || "promotion"; // Default to "marketing"
 
   return (
     <>
       <Header />
-      {variant === "marketing" ? (
+      {variant === "promotion" ? (
         <>
           <HeroMark />
           <WhyBusinessesStruggle />
           <ScaleProSolutionMark />
           <ReadyToScaleCTA />
         </>
-      ) : variant === "ecommerce" ? (
+      ) : variant === "retail" ? (
         <>
           <HeroEcommerce />
           <WhyEcommerceFails />
